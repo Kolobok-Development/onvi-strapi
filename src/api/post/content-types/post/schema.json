@@ -34,24 +34,35 @@
       ]
     },
     "vertical_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "horizontal_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "screen_redirect": {
+      "type": "string"
+    },
+    "button_title": {
+      "type": "string"
     }
   }
 }
