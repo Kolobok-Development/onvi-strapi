@@ -60,6 +60,26 @@
         "videos",
         "audios"
       ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "продукты",
+        "заправки",
+        "рестораны",
+        "развлечение"
+      ]
+    },
+    "bonus_type": {
+      "type": "enumeration",
+      "enum": [
+        "cashback",
+        "discount",
+        "cash_discount"
+      ]
+    },
+    "bonus": {
+      "type": "integer"
     }
   }
 }
