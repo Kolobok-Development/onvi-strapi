@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sampaigns",
+  "info": {
+    "singularName": "sampaign",
+    "pluralName": "sampaigns",
+    "displayName": "Сampaign"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "inserted_at": {
+      "type": "datetime"
+    },
+    "button_title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
