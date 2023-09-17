@@ -49,6 +49,16 @@
     },
     "button_title": {
       "type": "string"
+    },
+    "partner_icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
