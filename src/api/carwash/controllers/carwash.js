@@ -17,9 +17,12 @@ module.exports = {
     try {
       const baseUrl = process.env.DS_CLOUD_BASE_URL;
       const apiKey = process.env.DS_CLOUD_API_KEY
-      const path = '/external/collection/group/list';
+      const path = '/external/onvi/carwashes';
+      const reqParams = ctx.request.query;
+      console.log(reqParams);
       const queryParams = {
-        code: process.env.DS_CLOUD_SOURCE_ID
+        code: process.env.DS_CLOUD_SOURCE_ID,
+        ...reqParams
       };
 
       const headers = {
@@ -34,7 +37,8 @@ module.exports = {
 
       return ctx.send(response.data);
     }catch (error) {
-      return ctx.badRequest('An error occurred while fetching data from the API.');
+      console.log(error);
+      return ctx.badRequest(error);
     }
   }
 };
