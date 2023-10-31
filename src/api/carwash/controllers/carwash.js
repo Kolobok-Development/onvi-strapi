@@ -19,7 +19,6 @@ module.exports = {
       const apiKey = process.env.DS_CLOUD_API_KEY
       const path = '/external/onvi/carwashes';
       const reqParams = ctx.request.query;
-      console.log(reqParams);
       const queryParams = {
         code: process.env.DS_CLOUD_SOURCE_ID,
         ...reqParams
