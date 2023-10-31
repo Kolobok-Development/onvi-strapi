@@ -29,15 +29,12 @@ module.exports = {
         'akey': apiKey,
       };
 
-      console.log(baseUrl);
       const response = await axios.get(baseUrl + path, {
         params: queryParams,
         headers: headers
       });
-
-      return ctx.send(response.data);
+      return ctx.send({ businessesLocations: response.data});
     }catch (error) {
-      console.log(error);
       return ctx.badRequest(error);
     }
   }
