@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "story_views",
+  "info": {
+    "singularName": "story-view",
+    "pluralName": "story-views",
+    "displayName": "StoryView",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "profile": {
+      "type": "string"
+    },
+    "username": {
+      "type": "enumeration",
+      "enum": [
+        "Admin"
+      ]
+    },
+    "stories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::story.story"
+    }
+  }
+}

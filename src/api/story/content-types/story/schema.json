@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stories",
+  "info": {
+    "singularName": "story",
+    "pluralName": "stories",
+    "displayName": "Story"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "image",
+        "video"
+      ]
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "isReadMore": {
+      "type": "boolean"
+    },
+    "storyId": {
+      "type": "integer"
+    },
+    "showOverlay": {
+      "type": "boolean"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
