@@ -28,6 +28,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::story.story"
+    },
+    "icon": {
+      "type": "string"
     }
   }
 }
