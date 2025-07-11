@@ -1,0 +1,17 @@
+app.admin.onvione.ru {
+
+  reverse_proxy strapi:1337
+
+
+
+  encode zstd gzip
+
+  log {
+
+    output stdout
+
+    level info
+
+  }
+
+}

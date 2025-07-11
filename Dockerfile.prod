@@ -1,0 +1,25 @@
+# Production Dockerfile
+
+FROM node:18-alpine as builder
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY . .
+RUN npm run build
+
+# Final image
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
+
+COPY --from=builder /app ./
+
+EXPOSE 1337
+
+CMD ["npm", "start"]

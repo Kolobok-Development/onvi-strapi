@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  strapi:
+    container_name: strapi
+    build:
+      dockerfile: Dockerfile.prod
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./data:/app/.tmp
+      - ./uploads:/app/public/uploads
+    networks:
+      - web
+
+  caddy:
+    image: caddy:2
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - web
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  web:
+    driver: bridge
