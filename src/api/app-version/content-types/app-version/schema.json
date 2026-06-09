@@ -13,14 +13,16 @@
   "pluginOptions": {},
   "attributes": {
     "version": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "releaseDate": {
       "type": "date"
     },
     "isLatest": {
       "type": "boolean",
-      "default": false
+      "default": true,
+      "required": false
     },
     "isMandatory": {
       "type": "boolean",
@@ -30,14 +32,15 @@
       "type": "json"
     },
     "featureImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "featureTitle": {
       "type": "string"
