@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "app_versions",
+  "info": {
+    "singularName": "app-version",
+    "pluralName": "app-versions",
+    "displayName": "AppVersion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "version": {
+      "type": "string"
+    },
+    "releaseDate": {
+      "type": "date"
+    },
+    "isLatest": {
+      "type": "boolean",
+      "default": false
+    },
+    "isMandatory": {
+      "type": "boolean",
+      "default": false
+    },
+    "storeLinks": {
+      "type": "json"
+    },
+    "featureImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "featureTitle": {
+      "type": "string"
+    },
+    "featureDescription": {
+      "type": "string"
+    }
+  }
+}
