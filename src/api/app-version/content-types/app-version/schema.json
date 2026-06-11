@@ -46,7 +46,7 @@
       "type": "string"
     },
     "featureDescription": {
-      "type": "string"
+      "type": "text"
     }
   }
 }
